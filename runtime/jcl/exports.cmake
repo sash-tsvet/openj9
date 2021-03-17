@@ -342,6 +342,7 @@ omr_add_exports(jclse
 	Java_java_lang_Compiler_compileClassesImpl
 	Java_java_lang_Compiler_disable
 	Java_java_lang_Compiler_enable
+	Java_java_lang_Compiler_decompress
 	Java_java_lang_J9VMInternals_dumpString
 	Java_java_lang_J9VMInternals_getStackTrace
 	Java_java_lang_J9VMInternals_newInstance

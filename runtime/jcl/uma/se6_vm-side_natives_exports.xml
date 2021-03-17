@@ -238,6 +238,7 @@
 	<export name="Java_java_lang_Compiler_compileClassImpl" />
 	<export name="Java_java_lang_Compiler_disable" />
 	<export name="Java_java_lang_Compiler_enable" />
+	<export name="Java_java_lang_Compiler_decompress" />
 	<export name="Java_java_lang_J9VMInternals_newInstance" />
 	<export name="Java_java_lang_reflect_Proxy_defineClass0__Ljava_lang_ClassLoader_2Ljava_lang_String_2_3BII" />
 	<export name="Java_java_lang_reflect_Proxy_defineClass0__Ljava_lang_ClassLoader_2Ljava_lang_String_2_3BIILjava_lang_Object_2_3Ljava_lang_Object_2Ljava_lang_Object_2" />

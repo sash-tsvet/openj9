@@ -61,6 +61,19 @@ void JNICALL Java_java_lang_Compiler_disable(JNIEnv *env, jclass clazz)
 #endif
 }
 
+jobject* JNICALL Java_java_lang_Compiler_decompress(JNIEnv *env, jobject *objectRef)
+{
+#ifdef J9VM_INTERP_NATIVE_SUPPORT
+	 J9VMThread *currentThread = (J9VMThread *) env;
+	 J9JavaVM *vm = currentThread->javaVM;
+	
+
+	if (((uintptr_t)objectRef/* - (uintptr_t)((*env)->getExtensions()->_tenureBase)*/ > 0) && ((bool*)(vm->metadataTable))[(uintptr_t)objectRef/* - (uintptr_t)((*env)->getExtensions()->_tenureBase)*/]) {
+		return ((jobject**)(vm->addressTable))[(uintptr_t)objectRef/* - (uintptr_t)((*env)->getExtensions()->_tenureBase)*/]; 
+	}
+#endif
+	return objectRef; 
+}
 
 jobject JNICALL Java_java_lang_Compiler_commandImpl(JNIEnv *env, jclass clazz, jobject cmd)
 {

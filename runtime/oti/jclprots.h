@@ -627,6 +627,7 @@ void JNICALL Java_java_lang_Compiler_disable (JNIEnv *env, jclass clazz);
 jboolean JNICALL Java_java_lang_Compiler_compileClassImpl (JNIEnv *env, jclass clazz, jclass compileClass);
 jboolean JNICALL Java_java_lang_Compiler_compileClassesImpl (JNIEnv *env, jclass clazz, jstring nameRoot);
 void JNICALL Java_java_lang_Compiler_enable (JNIEnv *env, jclass clazz);
+jobject* JNICALL Java_java_lang_Compiler_decompress(JNIEnv *env, jobject *objectRef);
 
 #if (defined(J9VM_OPT_DYNAMIC_LOAD_SUPPORT)) /* priv. proto (autogen) */
 extern J9_CFUNC char* getExtraOptions (J9JavaVM* vm, char* key);

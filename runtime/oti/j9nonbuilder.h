@@ -28,6 +28,7 @@
 #ifndef J9NONBUILDER_H
 #define J9NONBUILDER_H
 
+#include <stdbool.h>
 /* @ddr_namespace: map_to_type=J9NonbuilderConstants */
 
 #include "j9vmconstantpool.h"
@@ -5396,6 +5397,12 @@ typedef struct J9JavaVM {
 	UDATA vmindexOffset;
 	UDATA vmtargetOffset;
 #endif /* defined(J9VM_OPT_OPENJDK_METHODHANDLE) */
+        //Data structures for compression
+	bool gcHappened;
+	void* metadataTable;
+	void* addressTable;
+	void* wpTable;
+	int PAGESIZE;
 } J9JavaVM;
 
 #define J9VM_PHASE_NOT_STARTUP  2
